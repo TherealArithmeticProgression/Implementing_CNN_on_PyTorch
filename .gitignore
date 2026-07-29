@@ -1,0 +1,11 @@
+.env
+*.pt
+*.pth
+*.bin
+*.onnx
+*.safetensors
+venv/
+.venv/
+env/
+data/
+datasets/
