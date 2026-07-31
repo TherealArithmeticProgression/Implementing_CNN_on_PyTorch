@@ -2,7 +2,8 @@ from model import Modl
 from config import *
 import torch.nn as nn
 import torch.optim as optim
-import tqdm
+from tqdm import tqdm
+
 def train_the_model(modl:Modl, epochs:int, train_dataload, test_dataload, dev=DEVICE):
   torch.manual_seed(24)
   modl.to(dev)
