@@ -7,8 +7,7 @@ class Modl(nn.Module):
         nn.Conv2d(3, 32, kernel_size=3, padding=1),
         nn.ReLU(),
         nn.Conv2d(32, 32, kernel_size=3, stride=2, padding=1),
-        nn.ReLU(),
-        nn.MaxPool2d(2, 2)
+        nn.ReLU()
     )
     self.fc=nn.Sequential(
         nn.Flatten(),
@@ -18,7 +17,6 @@ class Modl(nn.Module):
         nn.Linear(hidden_units, output_features),
         nn.BatchNorm1d(output_features),
         nn.ReLU(),
-        nn.Softmax(dim=1)
     )
   def forward(self, x):
     return self.fc(self.conv(x))
